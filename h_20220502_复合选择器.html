@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            color: red;
+        }
+        ul li a {
+            color: aquamarine;
+        }
+        .nav li a {
+            color: blueviolet;
+        }
+        .navchild>a {
+            color: chartreuse;
+        }
+        div,
+        p,
+        .navbing li a {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>天堂岛</li>
+        <li><a href="">神探阿蒙</a></li>
+    </ul>
+    <ul class="nav">
+        <li>天堂岛</li>
+        <li><a href="">神探阿蒙</a></li>
+    </ul>
+    <ul class="navchild">
+        <a href="">神探阿蒙</a>
+        <li>天堂岛</li>
+        <li><a href="">神探阿蒙子孙</a></li>
+    </ul>
+    <div>世纪之春</div>
+    <p>内蒙语</p>
+    <span>未来之城</span>
+    <ul class="navbing">
+        <li><a href="">第一类</a></li>
+        <li>第二类</li>
+    </ul>
+</body>
+</html>
