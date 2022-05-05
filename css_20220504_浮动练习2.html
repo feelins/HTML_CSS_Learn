@@ -17,7 +17,8 @@
             width: 1226px;
             height: 285px;
             background-color: cadetblue;
-            margin: 0 auto;
+            margin: 0 auto; 
+
         }
         .box li {
             float: left;
@@ -26,7 +27,7 @@
             background-color: tan;
             margin-right: 14px;
         }
-        /* 这里的.box必不可少，因为由于权重的关系 ，如果只写.last, 它是拼不过上面的权重的。 专门对最后一个加margin=0，也是*/
+        /* 这里的.box必不可少，因为由于权重的关系 ，如果只写.last, 它是拼不过上面的权重的。 专门对最后一个加margin=0，是因为最后一个再加margin，会被挤到下一行*/
         .box .last {
             margin-right: 0px;
         }
