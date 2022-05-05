@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix { /* IE6, 7专用 */
+            *zoom: 1;
+        }
+        .box {
+            /* overflow: hidden; /*给父盒子设置overflow*/ 
+            width: 800px;
+            background-color: aquamarine;
+            border: 1px solid gold;
+            margin: 0 auto;
+        }
+        .box .first {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box .second {
+            float: left;
+            width: 300px;
+            height: 100px;
+            background-color: violet;
+        }
+        .footer {
+            width: 800px;
+            height: 200px;
+            background-color: tomato;
+            margin: 0 auto;
+        }
+        /* .clear {
+            /* display: block; */
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="first">first</div>
+        <div class="second">second</div>
+        <!-- <span class="clear"></span> -->
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="footer">foot</div>
+</body>
+</html>
