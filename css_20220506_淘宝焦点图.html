@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .tb-promo {
+            position: relative;
+            /* 这个大小是图片的大小 */
+            width: 786px;
+            height: 500px;
+            background-color: aquamarine;
+            margin: 0 auto;
+        }
+        .tb-promo img {
+            /* 这样保证不同大小的图片不会撑大盒子，最好是保证图片都是相同 的大小 */
+            width: 786px;
+            height: 500px;
+        }
+        .prev,
+        .next {
+            position: absolute;
+            /* 绝对定位的图片，垂直居中 */
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(220, 20, 60, .9);
+            text-align: center;
+            line-height: 28px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .prev {
+            left: 0px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .next {
+            right: 0px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .nav-bar {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 16px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 16px;
+        }
+        .nav-bar li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin: 3px 5px;
+        }
+        .nav-bar .selected {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="tb-promo">
+        <img src="images/f1.jpg" alt="这是一只非常可爱的猫咪">
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next">&lt;</a>
+        <!-- 使用js之后，当选择了了圆点，会变成另外一种颜色，先定义一个 -->
+        <ul class="nav-bar">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
