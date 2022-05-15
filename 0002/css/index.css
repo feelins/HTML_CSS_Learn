@@ -99,3 +99,100 @@
 .bargin {
     margin-top: 5px;
 }
+.recomm {
+    height: 163px;
+    /* 这个地方背景少一点，获取图片上的背景色设置一下 */
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+.recomm_hd {
+    width: 205px;
+    height: 163px;
+    line-height: 163px;
+    background-color: #5c5251;
+    text-align: center;
+    /* padding-top: 30px; */
+}
+.recomm_bd ul li {
+    position: relative;
+    float: left;
+}
+.recomm_bd ul li img {
+    /* 这里一定要限定大小，防止传过来的图片撑大 */
+    width: 248px;
+    height: 163px;
+}
+/* :nth-child(-n+3) 保证了只影响前三个li，用了-n这个方式 */
+.recomm_bd ul li:nth-child(-n+3):after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 145px;
+    right: 0px;
+    top: 10px;
+    background-color: #ddd;
+}
+.favor {
+    height: 215px;
+    /* background-color: aqua; */
+    margin-top: 20px;
+}
+.favor .favor_hd {
+    height: 30px;
+}
+.favor .favor_hd h4 {
+    /* display: inline-block; */
+    /* float: left; */
+    font-size: 14px;
+}
+
+.favor .favor_hd a::after {
+    font-family: 'icomoon';
+    content: '\ead9';
+    /* display: inline-block; */
+    float: right;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.favor_bd {
+    /* display: inline-block; */
+    height: 215px;
+    /* background-color: violet; */
+    /* border: 1px solid #e4e4e4; */
+}
+.favor_bd ul li img {
+    display: block;
+    width: 160px;
+    height: 106px;
+    /* margin: 10px auto 0; */
+    margin-top: 10px;
+}
+.favor_bd ul li {
+    position: relative;
+    float: left;
+    width: 200px;
+    /* height: 136px; */
+    /* text-align: center; */
+    /* margin-top: 20px; */
+    border-top: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding-left: 20px;
+}
+.favor_bd ul li:last-child {
+    border-right: 1px solid #ebebeb;
+}
+.favor_bd ul li h5 {
+    margin-top: 5px;
+    font-weight: 400;
+}
+.favor_bd ul li span {
+    margin-top: 5px;
+    color: #c81623;
+    font-weight: 600;
+}
+.favor_bd ul li span::before {
+    font-family: 'icomoon';
+    content: '\e93e';
+    font-weight: 400;
+}
