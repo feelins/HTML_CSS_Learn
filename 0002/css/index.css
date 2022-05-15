@@ -196,3 +196,72 @@
     content: '\e93e';
     font-weight: 400;
 }
+
+.floor .w {
+    /* 这里没有使用.floor .jiadian,是因为其它版块也需要margin-top */
+    margin-top: 20px;
+}
+.jiadian_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+.jiadian_hd h3 {
+    float: left;
+    font-size: 18px;
+    color:#c81623;
+    font-weight: 400;
+}
+.tab_list {
+    line-height: 30px;
+}
+.tab_list ul li {
+    float: left;
+}
+.tab_list ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    /* margin只有三个值的时候，第一个是上，第二个是左右，第三个是下 */
+    margin: 9px 15px 0;
+}
+.jiadian_bd {
+    height: 361px;
+    /* background-color: chartreuse; */
+}
+.tab_list_item>div {
+    height: 361px;
+    /* 这里可以设置是最亲的div浮动 */
+    float: left;
+}
+/* 当前5个盒子宽度不均，专门设置几个宽度值 */
+.col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.col_210 ul {
+    padding-left: 12px;
+}
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+.col_329 {
+    width: 329px;
+}
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+.col_219 {
+    width: 219px;
+}
+.bb {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
