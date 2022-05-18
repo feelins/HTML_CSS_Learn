@@ -13,6 +13,29 @@
     height: 455px;
     /* background-color: blueviolet; */
 }
+.focus ul li {
+    position: relative;
+    width: 721px;
+    height: 455px;
+    display: block;
+    background: url(../images/shaopengfei.jpg) no-repeat;
+}
+
+.focus .arctic {
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    width: 250px;
+    height: 180px;
+}
+.focus ul li span {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
 /* 要把边框考虑进来，因为是CSS3的盒子 */
 
 .newsflash {
