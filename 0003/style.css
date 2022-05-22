@@ -17,11 +17,15 @@
     height: 180px;
     background-color: aquamarine;
     background: url(images/bg_head.jpg);
+    padding-left: 640px;
 }
 
 .nav_head {
-    float: left;
-    margin-top: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65px;
+    line-height: 65px;
 }
 
 .nav_head ul li {
@@ -59,10 +63,12 @@
 }
 
 .nav_search {
-    position: absolute;
+    /*position: absolute;
     top: 10px;
-    /* 这个地方应该有更好的方式，写死了是错误的 */
-    left: 550px;
+     这个地方应该有更好的方式，写死了是错误的 
+    left: 550px;*/
+    border-radius: 14px;
+    background-color: #fff;
 }
 
 .nav_search input {
@@ -85,8 +91,10 @@
 
 .nav_info {
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 0;
+    height: 65px;
+    line-height: 65px;
 }
 
 .nav_info ul li {
