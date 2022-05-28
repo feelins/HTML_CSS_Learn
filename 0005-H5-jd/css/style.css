@@ -150,3 +150,10 @@ nav a span {
     display: block;
     font-size: 12px;
 }
+.news a {
+    float: left;
+    width: 25%;
+}
+.news a img {
+    width: 100%;
+}
