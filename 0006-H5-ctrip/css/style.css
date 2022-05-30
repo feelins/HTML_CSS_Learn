@@ -1,0 +1,52 @@
+body {
+    /*320是一个经验值*/
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+a {
+    text-decoration: none;
+}
+/* 搜索模块 */
+.search-index {
+    display: flex;
+    /* 固定定位跟父级没有关系 ，以屏幕为准 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /* 以上两句是为了居中，因为是固定定位，用margin:0 auto;是没有用的 */
+    min-width: 320px;
+    max-width: 540px;
+    /* 固定的盒子应该有宽度 */
+    width: 100%;
+    height: 44px;
+    background-color: aquamarine;
+}
+.search-index .search {
+    flex: 1;
+}
+.search-index .user {
+    width: 44px;
+    height: 44px;
+    background-color: lightpink;
+    font-size: 12px;
+    text-align: center;
+    color: cornflowerblue;
+}
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/tabbar.png) no-repeat -6px -100px;
+    background-size: 32px auto;
+    margin: 5px auto 0;
+}
