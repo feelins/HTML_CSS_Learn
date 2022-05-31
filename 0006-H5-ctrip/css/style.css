@@ -1,3 +1,15 @@
+/* 字体声明, 引入字体图标的文件 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../fonts/icomoon.eot?p4ssmb');
+    src:  url('../../fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+        url('../../fonts/icomoon.ttf?p4ssmb') format('truetype'),
+        url('../../fonts/icomoon.woff?p4ssmb') format('woff'),
+        url('../../fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 body {
     /*320是一个经验值*/
     min-width: 320px;
@@ -10,8 +22,16 @@ body {
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
 }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
+}
+div {
+    box-sizing: border-box;
 }
 /* 搜索模块 */
 .search-index {
@@ -28,16 +48,31 @@ a {
     /* 固定的盒子应该有宽度 */
     width: 100%;
     height: 44px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 .search-index .search {
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ccc;
     flex: 1;
+    font-size: 12px;
+    color: #666;
+    padding-left: 5px;
+    margin: 8px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+.search-index .search::before {
+    font-family: 'icomoon';
+    content: "\e986";
+    font-size: 12px;
+    margin-right: 5px;
 }
 .search-index .user {
     width: 44px;
     height: 44px;
-    background-color: lightpink;
-    font-size: 12px;
+    /* background-color: lightpink; */
+    font-size: 10px;
     text-align: center;
     color: cornflowerblue;
 }
@@ -49,4 +84,21 @@ a {
     background: url(../images/tabbar.png) no-repeat -6px -100px;
     background-size: 32px auto;
     margin: 5px auto 0;
+}
+
+.focus img {
+    width: 100%;
+    padding-top: 44px;
+    /* margin-top: 44px; */
+}
+
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: aqua;
+    margin: 3px 4px;
+    border-radius: 8px;
+}
+.local-nav li {
+    flex: 1;
 }
