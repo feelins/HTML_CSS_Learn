@@ -102,3 +102,24 @@ div {
 .local-nav li {
     flex: 1;
 }
+.local-nav a {
+    /* 第一句先设置父盒子为flex布局，第二句主轴设置为侧轴，第三句设置侧轴的元素居中对齐 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+.local-nav li [class^=local-nav-icon] {
+    width: 32px;
+    height: 32px;
+    background-color: lightcoral;
+    margin-top: 8px;
+    background: url(../images/Snipaste_2022-06-01_21-22-43.png) no-repeat 0 5px;
+    background-size: 32px auto;
+}
+.local-nav li .local-nav-icon2 {
+    background-position: 0 -28px;
+}
+.local-nav li .local-nav-icon3 {
+    background-position: 0 -58px;
+}
