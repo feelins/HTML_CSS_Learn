@@ -194,6 +194,7 @@ nav {
 .subnav-entry li {
     /* 子盒子可以用百分比，相对比父盒子，这样能够让所有盒子自动换行 */
     flex: 20%;
+    margin-bottom: 6px;
 }
 .subnav-entry a {
     display: flex;
@@ -280,4 +281,18 @@ nav {
     border-top: 2px solid #ccc;
     border-right: 2px solid #ccc;
     transform: rotate(45deg);
+}
+.row {
+    display: flex;
+}
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.row a img {
+    width: 100%;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #ccc;
 }
