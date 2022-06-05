@@ -1,3 +1,78 @@
 // 首页的样式文件
 // 引入其它的less文件，可以加扩展名，也可以不加
 @import url(./common);
+body {
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+@basefont: 50;
+.search_content {
+    display: flex;
+    // 这个盒子是fixed，不能居中，只能通过修改left来修改
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 15rem;
+    // ????????
+    // 这个地方其实是利用了一个比例，因为想让高度为88，但是除以的是750和stepfont的比率
+    height: (88rem / @basefont);
+    background-color: #ffc001;
+    .classfy {
+        width: (44rem / @basefont);
+        height: (70rem / @basefont);
+        background: url(../images/157199320847433454.png) no-repeat;
+        background-size: (44rem / @basefont) (70rem / @basefont);
+        margin: (11rem / @basefont) (25rem / @basefont) (7rem / @basefont) (24rem / @basefont);
+    }
+    .search {
+        flex: 1;
+        // background-color: beige;
+        text-align: center;
+        input {
+            outline: none;
+            width: 88%;
+            border: 0;
+            height: (66rem / @basefont);
+            border-radius: (33rem / @basefont);
+            background-color: #fff;
+            margin-top: (12rem / @basefont);
+            font-size: (25rem / @basefont);
+            padding-left: (55rem / @basefont);
+            color: #757575;
+        }
+    }
+    .login {
+        width: (75rem / @basefont);
+        height: (70rem / @basefont);
+        line-height: (70rem / @basefont);
+        // background-color: lightpink;
+        margin: (10rem / @basefont);
+        font-size: (25rem / @basefont);
+        color: #fff;
+    }
+}
+
+.banner {
+    width: (750rem / @basefont);
+    height: (368rem / @basefont);
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ad {
+    display: flex;
+    a {
+        flex: 1;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
