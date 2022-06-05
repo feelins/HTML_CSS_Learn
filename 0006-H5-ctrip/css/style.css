@@ -146,8 +146,15 @@ nav {
     height: 88px;
     background-color: #fff;
 }
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
 .nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4b90ed, #53bced);
     margin: 2px auto;
+}
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
 }
 .nav-items {
     /* 这种写法不冲突 */
