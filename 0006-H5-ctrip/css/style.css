@@ -29,6 +29,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: #222;
 }
 div {
     box-sizing: border-box;
@@ -95,7 +96,7 @@ div {
 .local-nav {
     display: flex;
     height: 64px;
-    background-color: aqua;
+    background-color: #fff;
     margin: 3px 4px;
     border-radius: 8px;
 }
@@ -109,17 +110,69 @@ div {
     align-items: center;
     font-size: 12px;
 }
+/* 这里利用了5个盒子关联是用同样的格式，包括背景图，只是背景的位置区别
+所以利用一个属性选择器来区别，其它的只是改变背景图片的位置 */
 .local-nav li [class^=local-nav-icon] {
     width: 32px;
     height: 32px;
     background-color: lightcoral;
     margin-top: 8px;
-    background: url(../images/Snipaste_2022-06-01_21-22-43.png) no-repeat 0 5px;
+    margin-bottom: 2px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0px;
     background-size: 32px auto;
 }
 .local-nav li .local-nav-icon2 {
-    background-position: 0 -28px;
+    background-position: 0 -32px;
 }
 .local-nav li .local-nav-icon3 {
-    background-position: 0 -58px;
+    background-position: 0 -64px;
+}
+.local-nav li .local-nav-icon4 {
+    background-position: 0 -96px;
+}
+.local-nav li .local-nav-icon5 {
+    background-position: 0 -128px;
+}
+
+/* 主导航栏 */
+nav {
+    /* 这里如果不加overflow:hidden，则会造成小圆角出不来，因为只是给了nav，没有给里面的小盒子小圆角 */
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: #fff;
+}
+.nav-common:nth-child(2) {
+    margin: 2px auto;
+}
+.nav-items {
+    /* 这种写法不冲突 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.nav-items:nth-child(-n+2) {
+    /* 这里是为了给前两个盒子加右边框，则是三个盒子只有中间有边框的白线 */
+    border-right: 1px solid #fff;
+}
+.nav-items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    /* 文字加阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+.nav-items:nth-child(n+2) a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+.nav-items:nth-child(1) {
+    /* 这个bottom, center，表示背景图是靠最底部，左右居中 */
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
 }
