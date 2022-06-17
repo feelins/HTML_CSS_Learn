@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;" id="Application">
+        <h1>{{ count }}</h1>
+        <button v-on:click="clickButton">Click</button>
+    </div>
+    <script>
+        // 定义一个组件， 名为App
+        const App = {
+            // 定义组件中的数据
+            data() {
+                return {
+                    count: 0
+                }
+            },
+            methods: {
+                clickButton() {
+                    this.count += 1
+                }
+            }
+        }
+        Vue.createApp(App).mount("#Application")
+    </script>
+</body>
+
+</html>
