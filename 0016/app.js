@@ -29,6 +29,7 @@ if (darkmode) {
 themeToggle.addEventListener("change", function () {
   body.classList.toggle("dark");
 
+  // 下面这段是为了浏览器记录上次浏览的样式，代码没有看懂
   if (body.classList.contains("dark")) {
     localStorage.setItem("dark", "active");
   } else {

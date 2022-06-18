@@ -11,6 +11,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+ul li {
+    list-style: none;
+}
+
 body h1 {
     color: #282f59;
 }
@@ -36,6 +40,7 @@ body a {
 header {
     position: relative;
     background: url(./images/header-bg.png) no-repeat;
+    background-size: cover;
     min-height: 100vh;
 }
 
@@ -51,6 +56,45 @@ header {
     width: 100%;
     padding: 10px 50px;
     align-items: center;
+}
+
+.navbar .theme {
+    position: absolute;
+    top: 30px;
+    left: 30%;
+}
+
+.navbar .theme label {
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.navbar .theme .ball {
+    width: 15px;
+    height: 15px;
+    background-color: #282f59;
+    border-radius: 50%;
+    margin: 5px;
+    transition: transform .5s;
+}
+
+.navbar .theme .checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.navbar .theme .checkbox:checked~label {
+    background-color: #282f59;
+}
+
+.navbar .theme .checkbox:checked~label .ball {
+    background-color: #fff;
+    transform: translateX(25px);
 }
 
 .navbar ul {
@@ -89,7 +133,7 @@ header {
 .header-content h1 {
     font-size: 7vmin;
     margin-bottom: 30px;
-    margin-top: 7rem;
+    margin-top: 16rem;
     color: #4642ff;
 }
 
@@ -428,4 +472,146 @@ header {
 
 .review p {
     padding-left: 80px;
+}
+
+.blogs {
+    margin-top: 80px;
+}
+
+.blogs .blog-title {
+    font-size: 40px;
+    text-align: center;
+}
+
+.blogs .grid-wrapper {
+    padding: 4rem;
+}
+
+.blog {
+    min-height: 400px;
+    /* background-color: blueviolet; */
+}
+
+.blog img {
+    width: 100%;
+    max-height: 300px;
+}
+
+.get-started {
+    margin-top: 80px;
+    padding: 10rem;
+}
+
+.ctn-container {
+    display: flex;
+    widows: 80%;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    margin: 10px auto;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.ctn-btn {
+    padding: 10px 40px;
+    color: #fff;
+    background: var(--gradient-2);
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.479);
+    cursor: pointer;
+    outline: none;
+}
+
+.ctn-btn:hover {
+    background: var(--gradient-4);
+}
+
+.footer {
+    margin-top: 80px;
+    padding: 0 6rem;
+    background: url("./images/footer-agency.png") no-repeat;
+    background-size: cover;
+}
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+    /* background: #2af598; */
+}
+
+.footer .col-4:nth-child(1) h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.footer .col-4 i {
+    font-size: 25px;
+    margin: 50px 20px;
+    color: grey;
+}
+
+.footer .grid-wrapper .col-4 ul {
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.footer .grid-wrapper .col-4 ul li {
+    /* flex: 1; */
+    /* list-style: none; */
+    margin: 10px;
+    font-weight: 400;
+    color: grey;
+}
+
+.footer hr {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.copyright ul {
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    padding: 30px;
+    font-weight: 400;
+}
+
+#scrolltp {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    color: white;
+    background-color: red;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+body.dark {
+    background-color: #282f59;
+}
+
+body.dark p {
+    color: #cbcdda;
+}
+
+body.dark h1 {
+    color: whitesmoke;
+}
+
+body.dark .team h1 {
+    color: #282f59;
+}
+
+body.dark .footer .col-4 ul li {
+    color: #fff;
+}
+
+body.dark .circle {
+    opacity: .5;
 }

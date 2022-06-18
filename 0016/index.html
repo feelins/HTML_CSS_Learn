@@ -7,12 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Bees</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+            <div class="theme">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox">
+                    <div class="ball"></div>
+                </label>
+            </div>
             <img src="./images/logo.png" alt="" class="logo">
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
@@ -38,7 +45,7 @@
         </div>
     </header>
 
-    <section class="services">
+    <section class="services" data-aos="fade-right">
         <div class="container">
             <div class="grid-wrapper">
                 <div class="grid-box mobileapp">
@@ -73,7 +80,7 @@
             </div>
         </div>
     </section>
-    <section class="numbers">
+    <section class="numbers" data-aos="fade-left">
         <h1 class="numbers-title">We lead from front</h1>
         <p class="numbers-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ad asperiores,
             repellendus ipsam, quae tempore
@@ -105,7 +112,7 @@
         </div>
     </section>
     <!-- Projects -->
-    <section class="projects">
+    <section class="projects" data-aos="zoom-in">
         <h1>Our latest projects</h1>
         <div class="projects-images">
             <div class="pro-img">
@@ -159,7 +166,7 @@
         </div>
     </section>
     <!-- team -->
-    <section class="team">
+    <section class="team" data-aos="fade-down">
         <h1 class="team-title">Meet our team</h1>
         <div class="grid-wrapper">
             <div class="team-mem">
@@ -208,7 +215,7 @@
             </div>
         </div>
     </section>
-    <section class="testimonials">
+    <section class="testimonials" data-aos="fade-left">
         <h1 class="testimonials-title">What our clients says</h1>
         <p class="testimonials-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad beatae deserunt
             itaque cumque adipisci quibusdam
@@ -244,6 +251,104 @@
             </div>
         </div>
     </section>
+    <section class="blogs" data-aos="fade-right">
+        <h1 class="blog-title">Our Latest Blogs</h1>
+        <div class="grid-wrapper">
+            <div class="blog">
+                <img src="./images/blog1.png" alt="">
+                <h2>Powerful app for tracking daily activities</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus error sapiente ea voluptas
+                    aliquid reprehenderit id, rem qui ex. Ab?</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="blog">
+                <img src="./images/blog2.png" alt="">
+                <h2>Powerful app for tracking daily activities</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus error sapiente ea voluptas
+                    aliquid reprehenderit id, rem qui ex. Ab?</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="blog">
+                <img src="./images/blog3.png" alt="">
+                <h2>Powerful app for tracking daily activities</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus error sapiente ea voluptas
+                    aliquid reprehenderit id, rem qui ex. Ab?</p>
+                <a href="#">Read more...</a>
+            </div>
+        </div>
+    </section>
+    <section class="get-started">
+        <div class="ctn-container">
+            <div class="ctn-text">
+                <h1>Get Connected With TechBees</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, consequatur.</p>
+            </div>
+            <button class="ctn-btn">Get Started</button>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="grid-wrapper">
+            <div class="col-4">
+                <h1>Tech Bees</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aperiam sed repellendus eveniet,
+                    blanditiis incidunt totam quas. Fugit, fuga sed.</p>
+                <div class="social-profile">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Contact info</h1>
+                <ul>
+                    <li>Tech Bees, Newe jersery</li>
+                    <li>New York, USA</li>
+                    <li>0000-000-0000</li>
+                    <li>techbees@gmail.com</li>
+                    <li>website.com</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h1>About Us</h1>
+                <ul>
+                    <li>Company</li>
+                    <li>Projects</li>
+                    <li>Events</li>
+                    <li>Awards</li>
+                    <li>Open Source</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h1>Solutions</h1>
+                <ul>
+                    <li>Custom Software</li>
+                    <li>Web Design</li>
+                    <li>App development</li>
+                    <li>Events</li>
+                    <li>Open Source</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <ul>
+                <li>Copyright Gowtham Tirri. All rights reserved</li>
+                <li>Terms & use</li>
+                <li>Terms & use</li>
+            </ul>
+        </div>
+        <i id="scrolltp" class="fa fa-arrow-up"></i>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 100,
+            duration: 1000,
+        });
+    </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
