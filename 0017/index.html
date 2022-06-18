@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href='./images/牛油果.png'>
+    <!-- 引入图标 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>一个牛油果</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <!-- logo -->
+                <div class="logo">
+                    <img src="./images/牛油果.png" alt="logo">
+                    <h2>一个<span class="warning">牛油果</span></h2>
+                </div>
+                <!-- 关闭图标 -->
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>仪表盘</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>用户</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>订单</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>分析</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>消息</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>项目</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                    <h3>报告</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>设置</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>添加项目</h3></h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>退出登陆</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1>仪表盘</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>总销售额</h3>
+                            <h1>$25,024</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">最近24小时</small>
+                </div>
+                <!-- End of sales -->
+                <div class="expenses">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>总花费</h3>
+                            <h1>$14,160</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>80%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">最近24小时</small>
+                </div>
+                <!-- End of expenses -->
+                <div class="income">
+                    <span class="material-icons-sharp">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>总收入</h3>
+                            <h1>$10,864</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>44%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">最近24小时</small>
+                </div>
+                <!-- End of income -->
+            </div>
+            <!-- End of insights -->
+            <div class="recent-orders">
+                <h2>近期订单</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目名称</th>
+                            <th>项目数量</th>
+                            <th>是否付款</th>
+                            <th>状态</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>代号：代号</td>
+                            <td>13123123</td>
+                            <td>过期</td>
+                            <td class="warning">未付款</td>
+                            <td class="primary">详情</td>
+                        </tr> -->   
+                    </tbody>
+                </table>
+                <a href="#">加载更多</a>
+            </div>
+        </main>
+        <!-- End of main -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <P>Hey,<b>Van样</b></P>
+                        <small class="text-muted">地牢支配者</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./images/user.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- End of top -->
+            <div class="recent-updates">
+                <h2>最近更新</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./images/1.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>刘华强</b> 哥们儿，这瓜多少钱一斤呐?</p>
+                            <small class="text-muted">2分钟前</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./images/2.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>水果摊老板</b> 两块钱一斤。</p>
+                            <small class="text-muted">2分钟前</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./images/1.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>刘华强</b> what's up，这瓜皮子是金子做的，还是瓜粒子是金子做的?</p>
+                            <small class="text-muted">2分钟前</small>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="sales-analytics">
+                <h2>销售分析</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>在线订单</h3>
+                            <small class="text-muted">最近 24 小时</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>3849</h3>
+                    </div>
+                </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-icons-sharp">local_mall</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>离线订单</h3>
+                            <small class="text-muted">最近 24 小时</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>1100</h3>
+                    </div>
+                </div>
+                <div class="item customers">
+                    <div class="icon">
+                        <span class="material-icons-sharp">person</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>新用户</h3>
+                            <small class="text-muted">最近 24 小时</small>
+                        </div>
+                        <h5 class="success">+25%</h5>
+                        <h3>849</h3>
+                    </div>
+                </div>
+                <div class="item add-product">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                        <h3>添加项目</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./mock/mock.js"></script>
+    <script src="./js/index.js"></script>
+   
+</body>
+</html>
