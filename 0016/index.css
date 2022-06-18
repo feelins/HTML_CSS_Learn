@@ -615,3 +615,11 @@ body.dark .footer .col-4 ul li {
 body.dark .circle {
     opacity: .5;
 }
+
+body.dark a {
+    color: #cbcdda;
+}
+
+body.dark .team .team-title {
+    color: #fff;
+}
