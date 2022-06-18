@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        h1 {
+            color: #333399;
+        }
+
+        .w3-codespan {
+            color: #ff0033;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgba(255,99,71,0.2);">
+    <img src="/images/HupuBBS_200228130049-1242822577.png" alt="girl with phone" width="100" height="150">
+    <h1>HTML Formatting Elements</h1>
+
+    <p>Formatting elements were designed to display special types of text:</p>
+    <ul>
+        <li><code class="w3-codespan">&lt;b&gt;</code> - Bold text</li>
+        <li><code class="w3-codespan">&lt;strong&gt;</code> - Important text</li>
+        <li><code class="w3-codespan">&lt;i&gt;</code> - Italic text</li>
+        <li><code class="w3-codespan">&lt;em&gt;</code> - Emphasized text</li>
+        <li><code class="w3-codespan">&lt;mark&gt;</code> - Marked text</li>
+        <li><code class="w3-codespan">&lt;small&gt;</code> - Smaller text</li>
+        <li><code class="w3-codespan">&lt;del&gt;</code> - Deleted text</li>
+        <li><code class="w3-codespan">&lt;ins&gt;</code> - Inserted text</li>
+        <li><code class="w3-codespan">&lt;sub&gt;</code> - Subscript text</li>
+        <li><code class="w3-codespan">&lt;sup&gt;</code> - Superscript text</li>
+    </ul>
+    <hr>
+    <h1>blockquote</h1>
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization,
+        WWF works in 100 countries and is supported by
+        1.2 million members in the United States and
+        close to 5 million globally.
+    </blockquote>
+    <h3 id="demo"></h3>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello Javascript!";
+        document.getElementById("demo").style.color = "red";
+    </script>
+    <h2>File Path Examples</h2>
+    <table class="ws-table-all">
+        <tr>
+            <th style="width:280px">Path</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;img src=&quot;picture.jpg&quot;&gt;</td>
+            <td>The &quot;picture.jpg&quot; file is located in the same folder as the current page</td>
+        </tr>
+        <tr>
+            <td>&lt;img src=&quot;images/picture.jpg&quot;&gt;</td>
+            <td>The &quot;picture.jpg&quot; file is located in the images folder in the current folder</td>
+        </tr>
+        <tr>
+            <td>&lt;img src=&quot;/images/picture.jpg&quot;&gt;</td>
+            <td>The &quot;picture.jpg&quot; file is located in the images folder at the root of the current web</td>
+        </tr>
+        <tr>
+            <td>&lt;img src=&quot;../picture.jpg&quot;&gt;</td>
+            <td>The &quot;picture.jpg&quot; file is located in the folder one level up from the current folder</td>
+        </tr>
+    </table>
+    <hr>
+</body>
+
+</html>

@@ -8,16 +8,27 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
     <style>
+        div {
+            width: 200px;
+            height: 50px;
+            background-color: lightsalmon;
+            margin: 0 auto;
+            border-radius: 30px;
+            text-align: center;
+        }
+
         h1 {
-            color: blue;
+            color: yellow;
+            line-height: 50px;
         }
     </style>
 </head>
 
 <body>
-    <div style="text-align: center;" id="Application">
+    <div id="Application">
         <h1>{{ count }}</h1>
         <button v-on:click="clickButton">Click</button>
+        <h2>{{ count2 }}</h2>
     </div>
     <script>
         // 定义一个组件， 名为App
@@ -25,12 +36,14 @@
             // 定义组件中的数据
             data() {
                 return {
-                    count: 0
+                    count: 0,
+                    count2: 20
                 }
             },
             methods: {
                 clickButton() {
-                    this.count += 1
+                    this.count -= 1;
+                    this.count2 = this.count + 100;
                 }
             }
         }
