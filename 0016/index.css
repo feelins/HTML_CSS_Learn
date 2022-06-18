@@ -110,3 +110,322 @@ header {
     border: none;
     color: whitesmoke;
 }
+
+.services {
+    margin-top: 80px;
+}
+
+.container {
+    padding: 3rem;
+    display: flex;
+}
+
+.grid-wrapper,
+.services-content {
+    flex-basis: 50%;
+}
+
+.grid-wrapper {
+    display: grid;
+    /* 将布局分成2行2列
+    grid-template-columns: 1fr 1fr; */
+    /* 将布局分成4列
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* 也可以写成
+    grid-template-columns: repeat(4, 1fr); */
+    /* auto-fit是指盒子只能显示一个的时候，也可以自动占领50%的宽度，另外一个是小于250的宽度时自动变成一行 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+    padding: 2rem;
+}
+
+.grid-box {
+    /* background: darkslategray; */
+    /* margin: 10px; */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+}
+
+.grid-box img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+    animation: scaleup 6s ease-in-out infinite;
+}
+
+.grid-box h1 {
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.mobileapp {
+    background: var(--gradient-1);
+    margin-bottom: 30px;
+}
+
+.webdesign {
+    background: var(--gradient-2);
+    margin-top: 30px;
+}
+
+.marketing {
+    background: var(--gradient-3);
+    margin-bottom: 30px;
+}
+
+.branding {
+    background: var(--gradient-4);
+    margin-top: 30px;
+}
+
+.services-content {
+    position: relative;
+    padding: 3rem;
+}
+
+.services-content h1 {
+    font-size: 6vmin;
+    margin-bottom: 30px;
+}
+
+.services-content p {
+    padding-right: 6rem;
+    margin-bottom: 30px;
+}
+
+.circle img {
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    width: 650px;
+    z-index: -1;
+    animation: scaleup 6s ease-in-out infinite;
+}
+
+.mockup-img {
+    flex-basis: 50%;
+}
+
+.mockup-img img {
+    max-width: 90%;
+    margin: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.329);
+    border-radius: 10px;
+}
+
+.happy-clients {
+    background: var(--gradient-4);
+}
+
+.projects-completed {
+    background: var(--gradient-3);
+}
+
+.running-projects {
+    background: var(--gradient-2);
+}
+
+.awesome-designs {
+    background: var(--gradient-1);
+}
+
+.numbers {
+    margin-top: 100px;
+}
+
+.numbers .numbers-title {
+    font-size: 40px;
+    padding-left: 5rem;
+    padding-right: 50%;
+}
+
+.numbers .numbers-content {
+    padding-left: 5rem;
+    padding-right: 50%;
+}
+
+.numbers .grid-box h2 {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.numbers .grid-box h1 {
+    font-size: 40px;
+}
+
+.numbers .grid-box {
+    transition: transform 1s ease-in-out;
+}
+
+.numbers .grid-box:hover {
+    transform: translateY(-20px);
+}
+
+@keyframes scaleup {
+    0% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.projects {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.projects-images {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+}
+
+.pro-img {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.pro-img img {
+    max-height: 100%;
+}
+
+.details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.534);
+    transform: scaleX(0);
+    transition: transform .8s ease;
+}
+
+/* 这里要注意是对于盒子里，当hover时候的detail重新写一个转化的动画出来，不是只对：hover就可以了 */
+.pro-img:hover .details {
+    transform: scaleX(1);
+}
+
+.details h1,
+.details h2,
+.details i {
+    color: whitesmoke;
+}
+
+.details i {
+    font-size: 30px;
+}
+
+.team {
+    margin-top: 80px;
+}
+
+.team .team-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team .grid-wrapper {
+    background: var(--gradient-2);
+    padding: 4rem;
+}
+
+.team-mem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 400px;
+    border-radius: 5px;
+    transition: transform .8s ease;
+}
+
+.team-mem:hover {
+    transform: translateY(-20px);
+}
+
+.team-mem h2,
+.team-mem i {
+    color: gray;
+}
+
+.team-mem h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.team-mem i {
+    margin: 20px;
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+
+.team-mem i:hover {
+    color: #009efd;
+    transform: scale(1.2);
+}
+
+.team-mem img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.testimonials {
+    margin-top: 80px;
+}
+
+.testimonials .testimonials-title {
+    font-size: 40px;
+    padding-left: 5rem;
+}
+
+.testimonials .testimonials-content {
+    padding-left: 5rem;
+    padding-right: 50%;
+}
+
+.testimonials .grid-wrapper {
+    padding-left: 3rem;
+}
+
+.review {
+    /* background-color: #2af598; */
+    min-height: 400px;
+}
+
+.review .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.review .profile img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review i {
+    font-size: 30px;
+    color: gray;
+    margin-bottom: 50px;
+}
+
+.review p {
+    padding-left: 80px;
+}
