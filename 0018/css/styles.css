@@ -91,16 +91,61 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
+body.dark-theme {
+    /* --bg-color: hsl(220, 18%, 78%);
+    --bg-color-light: hsl(220, 18%, 86%);
+    --title-color: hsl(220, 8%, 10%);
+    --text-color: hsl(220, 4%, 32%);
+    --text-color-light: hsl(220, 4%, 55%);
+    --body-color: hsl(220, 18%, 99%);
+    --container-color: hsl(220, 18%, 97%); */
 
+    /* 这里的设置dark模式就更专业了，通过重新设置一组数值 */
+    --bg-color: hsl(220, 18%, 13%);
+    --bg-color-light: hsl(220, 18%, 23%);
+    --title-color: hsl(220, 8%, 95%);
+    --text-color: hsl(220, 8%, 65%);
+    /* --text-color-light: hsl(220, 4%, 55%); */
+    --body-color: hsl(220, 18%, 18%);
+    --container-color: hsl(220, 18%, 21%);
+}
 
 /*========== Button Dark/Light ==========*/
-
+.change-theme {
+    color: var(--title-color);
+    font-size: 1.125rem;
+    cursor: pointer;
+}
 
 /*========== 
     Color changes in some parts of 
     the website, in dark theme 
 ==========*/
+.dark-theme .scroll-header {
+    background-color: var(--container-color);
+    box-shadow: 0 2px 8px hsla(220, 18%, 8%, .3);
+}
 
+.dark-theme .nav__menu {
+    background-color: var(--container-color);
+}
+
+.dark-theme .nav__menu,
+.dark-theme .scrollup {
+    box-shadow: 0 4px 8px hsla(220, 18%, 8%, .3);
+}
+
+.dark-theme::-webkit-scrollbar {
+    background-color: hsl(220, 18%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 18%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(220, 18%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -164,6 +209,8 @@ img {
         margin: 0 auto;
         padding: 1.25rem 2.8rem;
         border-radius: .5rem;
+        transition: .4s;
+        /*For animation dark mode*/
     }
 
     .nav__list {
@@ -197,12 +244,16 @@ img {
 }
 
 /* Active link */
-
+.active-link {
+    color: var(--title-color);
+}
 
 /*=============== HOME ===============*/
 .home {
     background-color: var(--bg-color);
     overflow: hidden;
+    transition: .4s;
+    /*For animation dark mode*/
 }
 
 .home__container {
@@ -228,7 +279,7 @@ img {
 .home__images {
     position: relative;
     width: 310px;
-    height: 300px;
+    /* height: 300px; */
     justify-self: center;
 }
 
@@ -236,17 +287,20 @@ img {
     width: 224px;
     position: absolute;
     right: -1.5rem;
-    top: -1.5rem;
+    /* 这个地方用-9.5和上面的gap 8.5有一个偏差，是要有一个旁边箭头指向这个图片的效果 */
+    top: -9.5rem;
 }
 
 .home__images img:nth-child(2) {
     width: 180px;
-    /* margin-left: .5rem; */
-    position: absolute;
-    left: -1.5rem;
-    bottom: -1.5rem;
+    margin-left: .5rem;
+    position: relative;
+    /* left: -1.5rem;
+    bottom: -1.5rem; */
     /* position: relative; */
     /* 此处和教程不同，当前的结果是根据视图修改之后 的 */
+    /* 因为home__container的书写错误，造成 row-gap没有起作用，这个地方是8.5rem正好是top这个值的问题。
+    这个地方没有问题了 */
 }
 
 /*=============== BUTTON ===============*/
@@ -318,6 +372,8 @@ img {
     background-color: var(--bg-color-light);
     /* 两次出现的overflow,hidden是为了避免什么？没有明白  */
     overflow: hidden;
+    transition: .4s;
+    /*For animation dark mode*/
 }
 
 .collection__container {
@@ -514,17 +570,130 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(220, 8%, 76%);
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 8%, 64%);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(220, 8%, 54%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    /* bottom: 7.5rem; */
+    /* 当设置为7.5rem的时候，是正常的显示位置，
+    使用javascript的时候，在触发的时候增加一个show-scroll样式，将这个值设置回来 */
+    bottom: -30%;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 12px hsla(220, 18%, 45%, .15);
+    display: inline-flex;
+    padding: .35rem;
+    color: var(--title-color);
+    font-size: 1.1rem;
+    z-index: var(--z-tooltip);
+    transition: .3s;
+}
 
+.scrollup:hover {
+    transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up*/
-
+.show-scroll {
+    /* 当设置为7.5rem的时候，是正常的显示位置，
+    使用javascript的时候，在触发的时候增加一个show-scroll样式，将这个值设置回来 */
+    bottom: 7.5rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 340px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 
+    .footer__content {
+        grid-template-columns: max-content;
+        row-gap: 2rem;
+    }
+
+    .nav__menu {
+        /* padding: 1rem 1.5rem; */
+        /* 这个地方如果用作者的，在280px的时候特别挤，所以变成左右0.5rem */
+        padding: 1rem .25rem;
+    }
+
+    .home__container {
+        padding: 2rem 0 1rem;
+        row-gap: 6rem;
+    }
+
+    .home__description {
+        font-size: var(--small-font-size);
+    }
+
+    .home__images {
+        width: 248px;
+    }
+
+    .home__images img:nth-child(1) {
+        width: 180px;
+        top: -7rem;
+    }
+
+    .home__images img:nth-child(2) {
+        width: 150px;
+    }
+
+    /* 这一句没有看出来效果？ */
+    .new__img {
+        width: 230px;
+    }
+
+    .new__link {
+        padding-right: 0;
+    }
+
+    .collection__explore:nth-child(1),
+    .collection__explore:nth-child(2) {
+        position: initial;
+        grid-template-columns: 230px;
+        row-gap: 2rem;
+        margin: 0;
+    }
+
+    .collection__container {
+        height: initial;
+        row-gap: 3rem;
+    }
+
+    .collection__data-men {
+        margin-top: 0;
+    }
+
+    .collection__data-women {
+        margin-bottom: 0;
+    }
+
+    .products__card {
+        width: 230px;
+    }
+
+    .brand__container {
+        grid-template-columns: repeat(2, 100px);
+        row-gap: .5rem;
+    }
+}
 
 /* For medium devices */
 
