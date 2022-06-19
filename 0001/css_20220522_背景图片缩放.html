@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            height: 600px;
+            background: url(0003/images/6bb3bcc57b3d891d2d8f0f7f79661f41f108412f.jpg@672w_378h_1c.webp) no-repeat;
+            border: 2px solid red;
+            /*background-size: 参数是宽度，高度，有一个数值的时候就是宽度*/
+            /* background-size: 800px 400px; */
+            /* 1. 只写一个数值，就是宽度，高度省略，这样按照图片比例缩放 */
+            /* background-size: 800px; */
+            /* 单位也可以用%，是父盒子的宽度 用cover是覆盖div盒子，但是部分背景图片显示不全*/
+            /* background-size: cover; contain,是拉伸的过程中，有一边达到盒子大小，就不再拉伸*/
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            overflow: hidden;
+            font-size: 20px;
+            width: 0;
+            height: 30px;
+            background-color: lightcoral;
+            /* 强制文字在一行内对齐 */
+            white-space: nowrap;
+            /* steps就是分几步来完成动画，有了steps，就不要写ease或者linear 了*/
+            animation: w 4s steps(6) forwards;
+        }
+        @keyframes w {
+            0% {}
+            100% {
+                /* 这个宽度根据字数多少，每个字20px大小，6个字就是120px*/
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>世纪之春花园</div>
+</body>
+</html>

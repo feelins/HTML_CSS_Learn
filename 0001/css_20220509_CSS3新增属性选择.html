@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*必须包括value属性的*/
+        input[value] {
+            color: blue;
+        }
+        input[type=password] {
+            background-color: darkgreen;
+        }
+        div[class^=icon] {
+            background-color: blueviolet;
+            width: 100px;
+            height: 20px;
+            margin: 10px;
+        }
+        div[class*=c] {
+            background-color: blueviolet;
+            width: 100px;
+            height: 20px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 如何选择第一个input? -->
+    <input type="text" value="请输入用户名">
+    <input type="text">
+
+    <input type="text" name="" id="">
+    <input type="password" name="" id="">
+    <div class="icon1">1</div>
+    <div class="icon2">2</div>
+    <div class="io3">3</div>
+    <div class="ic4">3</div>
+</body>
+</html>
