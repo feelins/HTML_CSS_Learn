@@ -1,25 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            width: 50vw;
+            margin: 0 auto;
+        }
+
+        .grid-wrapper {
+            width: 100%;
+            display: flex;
+            height: 300px;
+            margin-top: 30px;
+            background: linear-gradient(to bottom right, #2af598, #009efd);
+        }
+
+        .grid-wrapper .grid-img {
+            flex: 1;
+            text-align: right;
+            padding: 20px 10px;
+            margin-right: 20px;
+            display: flex;
+        }
+
+        .grid-wrapper .grid-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+        }
+
+        .grid-wrapper .grid-content {
+            flex: 3;
+        }
+
+        .grid-wrapper .grid-content h2 {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .grid-wrapper .grid-content p {
+            color: #fff;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <ul>
-            <li><a href="0001\index.html">0 001</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
+        <div class="grid-wrapper">
+            <div class="grid-img">
+                <img src="./0001/images/HupuBBS_200228130049-1242822577.png" alt="">
+            </div>
+            <div class="grid-content">
+                <h2>0001 - Pink老师课程跟练</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias necessitatibus aliquam eos
+                    minima eum assumenda facere enim deserunt! Quis totam blanditiis velit ipsam ea veniam laudantium
+                    corporis iure impedit?</p>
+            </div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="grid-img">
+                <img src="./0002/FireShot Capture 002.png" alt="">
+            </div>
+            <div class="grid-content">
+                <h2>0002 - Pink老师品优购web学习</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias necessitatibus aliquam eos
+                    minima eum assumenda facere enim deserunt! Quis totam blanditiis velit ipsam ea veniam laudantium
+                    corporis iure impedit?</p>
+            </div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="grid-img">
+                <img src="./0003/0003.jpg" alt="">
+            </div>
+            <div class="grid-content">
+                <h2>0003 | 自己尝试实现B站首页头部</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias necessitatibus aliquam eos
+                    minima eum assumenda facere enim deserunt! Quis totam blanditiis velit ipsam ea veniam laudantium
+                    corporis iure impedit?</p>
+            </div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="grid-img">
+                <img src="./0001/images/HupuBBS_200228130049-1242822577.png" alt="">
+            </div>
+            <div class="grid-content">
+                <h2>Pink老师课程跟练</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias necessitatibus aliquam eos
+                    minima eum assumenda facere enim deserunt! Quis totam blanditiis velit ipsam ea veniam laudantium
+                    corporis iure impedit?</p>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
