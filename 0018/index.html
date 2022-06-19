@@ -1,72 +1,147 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="" type="image/x-icon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--=============== REMIXICONS ===============-->
-        
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
-        <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="">
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="">
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="">
 
-        <title>Responsive clothing ecommerce - Bedimcode</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-        </header>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./css/styles.css">
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
-            </section>
+    <title>Responsive clothing ecommerce - Bedimcode</title>
+</head>
 
-            <!--==================== NEW ====================-->
-            <section class="new section" id="new">
-                
-            </section>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Shop.
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="ri-home-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>New</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#collection" class="nav__link">
+                            <i class="ri-compasses-line"></i>
+                            <span>Collection</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">
+                            <i class="ri-t-shirt-line"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Theme change button -->
+            <i class="ri-moon-line"></i>
+        </nav>
+    </header>
 
-            <!--==================== COLLECTION ====================-->
-            <section class="collection section" id="collection">
-                
-            </section>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home_container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        New Clothing<br>
+                        Collection
+                    </h1>
+                    <p class="home__description">
+                        The new collection of clothing from <br>
+                        the best brands this year.
+                    </p>
 
-            <!--==================== PRODUCTS ====================-->
-            <section class="products section" id="products">
-                
-            </section>
+                    <a href="#new" class="button__link">
+                        Explore <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
 
-            <!--==================== BRANDS ====================-->
-            <section class="brand section">
-                
-            </section>
-        </main>
+                <div class="home__images">
+                    <img src="./img/home1.png" alt="home image">
+                    <img src="./img/home2.png" alt="home image">
+                </div>
+            </div>
+        </section>
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer section">
-            
-        </footer>
+        <!--==================== NEW ====================-->
+        <section class="new section" id="new">
+            <h2 class="section__title">
+                New Categories
+            </h2>
+            <div class="new__container container grid">
+                <article class="new__card">
+                    <img src="./img/new1.png" alt="new image" class="new__img">
 
-        <!--========== SCROLL UP ==========-->
+                    <a href="#" class="new__link">
+                        <div class="new__data">
+                            <h2 class="new__title">
+                                Hoodie & Sweatshirt
+                            </h2>
+                            <span>
+                                Winter collection
+                            </span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
 
-        
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src=""></script>
+        <!--==================== COLLECTION ====================-->
+        <section class="collection section" id="collection">
 
-        <!--=============== SWIPER JS ===============-->
-        <script src=""></script>
+        </section>
 
-        <!--=============== MAIN JS ===============-->
-        <script src=""></script>
-    </body>
+        <!--==================== PRODUCTS ====================-->
+        <section class="products section" id="products">
+
+        </section>
+
+        <!--==================== BRANDS ====================-->
+        <section class="brand section">
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src=""></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src=""></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="./js/main.js"></script>
+</body>
+
 </html>
