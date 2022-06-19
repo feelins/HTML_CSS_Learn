@@ -189,8 +189,12 @@ img {
     }
 }
 
-/* Change background header */
-
+/* Change background header 当滚动条滚动一段距离之后，在顶端的导航就出现一个阴影，类似于一直粘贴在顶部
+这一部分通过javascript实现，见main.js*/
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px hsla(220, 4%, 15%, .1);
+}
 
 /* Active link */
 
@@ -264,22 +268,250 @@ img {
 }
 
 /*=============== NEW ===============*/
+.new__container {
+    row-gap: 2.5rem;
+    /* background-color: aquamarine; */
+    padding-bottom: 1.5rem;
+}
 
+.new__card {
+    justify-self: center;
+    /* background-color: tomato; */
+}
+
+.new__img {
+    width: 270px;
+    margin-bottom: 1rem;
+    /* background-color: tomato; */
+}
+
+.new__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--title-color);
+    padding-right: .75rem;
+    /* background-color: tomato; */
+}
+
+.new__link i {
+    font-size: 1.25rem;
+    transition: .3s;
+}
+
+.new__link i:hover {
+    transform: translateX(.5rem);
+}
+
+.new__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: .25rem;
+}
+
+.new_subtitle {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+}
 
 /*=============== COLLECTION ===============*/
+.collection {
+    background-color: var(--bg-color-light);
+    /* 两次出现的overflow,hidden是为了避免什么？没有明白  */
+    overflow: hidden;
+}
 
+.collection__container {
+    position: relative;
+    height: 571px;
+    display: grid;
+    justify-items: center;
+}
+
+.collection__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: .75rem;
+}
+
+.collection__explore {
+    display: grid;
+    column-gap: 2rem;
+    position: absolute;
+}
+
+.collection__explore:nth-child(2) {
+    /* 让图片宽度为230px，文字以文字的最大宽度 */
+    grid-template-columns: 230px max-content;
+    bottom: 1rem;
+    margin-right: 5rem;
+}
+
+.collection__explore:nth-child(1) {
+    grid-template-columns: max-content 230px;
+    top: 0;
+    margin-left: 5rem;
+}
+
+.collection__data-men {
+    margin-top: 2.5rem;
+}
+
+.collection__data-women {
+    /* 让文字和图片下方对齐 */
+    align-self: flex-end;
+    margin-bottom: 2.5rem;
+}
 
 /*=============== PRODUCTS ===============*/
+.products__container {
+    /* 作者为什么要先设置这里，一个大盒子的下沿，这个完全可以在下一个盒子的时候设置marin-top，不解 */
+    padding-bottom: 5rem;
+    /* background-color: tomato; */
+}
 
+.products__card {
+    width: 270px;
+}
+
+.products__img {
+    margin-bottom: 37.5px;
+}
+
+.products__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+}
+
+.products__price {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
 
 /* Swiper class */
+/* 原来的大箭头，是::after控制的，这里设置为空即可显示出来我们设置的字体图标 i */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+}
 
+.swiper-button-prev,
+.swiper-button-next {
+    /* 这个initial貌似之前没有接触过？是什么意思？ */
+    top: initial;
+    bottom: 0;
+    width: initial;
+    height: initial;
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.swiper-button-prev {
+    left: calc(50% - 2.5rem);
+}
+
+.swiper-button-next {
+    right: calc(50% - 2.5rem);
+}
 
 /*=============== BRANDS ===============*/
+.brand__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 1.25rem;
+}
 
+.brand__img {
+    width: 120px;
+}
+
+/* 这里就联想到上次的0016课程，这个错开的效果，应该用下面的方法更好 */
+.brand__img:nth-child(even) {
+    margin-top: 2rem;
+}
 
 /*=============== FOOTER ===============*/
+.footer__container {
+    row-gap: 3rem;
+}
 
+.footer__logo {
+    color: var(--title-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    display: inline-block;
+    margin-bottom: .75rem;
+}
+
+.footer__content,
+.footer__links {
+    display: grid;
+}
+
+.footer__content {
+    /* 这应该是bootstrap布局，2*2布局 */
+    grid-template-columns: repeat(2, max-content);
+    gap: 3.5rem 3rem;
+}
+
+.footer__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.25rem;
+}
+
+.footer__links {
+    row-gap: .75rem;
+}
+
+.footer__link,
+.footer__information {
+    font-size: var(--small-font-size);
+}
+
+.footer__link {
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+    color: var(--title-color);
+}
+
+.footer__social {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.footer__social-link {
+    /* inline-flex有什么作用？ */
+    display: inline-flex;
+    padding: .4rem;
+    color: var(--title-color);
+    background-color: var(--container-color);
+    font-size: 1.25rem;
+    transition: background-color .3s;
+    border-radius: 20%;
+}
+
+.footer__social-link:hover {
+    color: var(--text-color-light);
+    background-color: var(--bg-color-light);
+    border-radius: 20%;
+}
+
+.footer__info {
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .75rem;
+}
+
+.footer__copy,
+.footer__privacy {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
 
 /*=============== SCROLL BAR ===============*/
 
