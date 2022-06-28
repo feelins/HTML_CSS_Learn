@@ -155,3 +155,123 @@ body {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+.container {
+    padding-inline: 15px;
+}
+
+button,
+a {
+    transition: var(--transition);
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header {
+    position: relative;
+    z-index: 2;
+}
+
+.header-top {
+    background: var(--prussian-blue);
+    /* 这句话是新出现的，没有见过 */
+    padding-block: 15px;
+}
+
+.header-top .container,
+.header-top-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top .container {
+    gap: 8px 20px;
+}
+
+.header-top-list {
+    gap: 15px;
+}
+
+.header-top-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-6);
+    color: var(--white);
+    font-weight: var(--fw-700);
+    gap: 5px;
+}
+
+.header-top-link:is(:hover, :focus) {
+    color: var(--orange-soda);
+}
+
+.header-top-link ion-icon {
+    color: var(--orange-soda);
+    font-size: 15px;
+    --ionicon-stroke-width: 60px;
+}
+
+.header-top .wrapper,
+.header-top-social-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .wrapper {
+    gap: 20px;
+}
+
+.header-top-social-list {
+    gap: 8px;
+}
+
+.header-top-social-link {
+    color: var(--white);
+    font-size: 15px;
+}
+
+.header-top-btn {
+    background: var(--orange-soda);
+    color: var(--white);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-700);
+    padding: 4px 15px;
+}
+
+/* 通过调整最开始设置的变量，也可以达到颜色的变化 */
+.header-top-btn:is(:hover, :focus) {
+    --orange-soda: hsl(7, 72%, 46%);
+}
+
+.header-bottom {
+    background: var(--white);
+    padding-block: 25px;
+}
+
+.header-bottom .logo img {
+    margin-inline: auto;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -310px;
+    max-width: 300px;
+    height: 100%;
+    background: var(--white);
+    box-shadow: 0 3px 10px hsla(0, 0%, 0%, .3);
+    z-index: 5;
+    padding: 60px 20px;
+    visibility: hidden;
+    transition: .15s ease-in;
+}
+
+.navbar.active {
+    visibility: visible;
+    transform: translateX(310px);
+    transition: 0.25s ease-out;
+}
