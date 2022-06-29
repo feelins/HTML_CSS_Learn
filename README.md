@@ -23,3 +23,4 @@ something about learning html css
 | 0013 |  Youtube Jonas Schmedtmann HTML课程的学习| * 移动端 |
 | 0016 |  Youtube Gowtham Tirri网站首页布局的练习| * 移动端 |
 | 0018 |  Youtube bedimcode 网站首页布局的练习| * responsive-clothing-landing-page-main |
+| 0019 |  房地产网站 | * 技术方案陌生 |
