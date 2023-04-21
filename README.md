@@ -22,5 +22,5 @@ something about learning html css
 | 0012 |  自己跟练一个图片圆角及vh,vw理解| * 移动端 |
 | 0013 |  Youtube Jonas Schmedtmann HTML课程的学习| * 移动端 |
 | 0016 |  Youtube Gowtham Tirri网站首页布局的练习| * 移动端 |
-| 0018 |  Youtube bedimcode 网站首页布局的练习| * responsive-clothing-landing-page-main |
+| 0018 |  Youtube bedimcode 网站首页布局的练习 | * responsive-clothing-landing-page-main |
 | 0019 |  房地产网站 | * 技术方案陌生 |
